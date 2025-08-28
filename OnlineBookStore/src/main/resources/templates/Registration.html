@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org" th:replace="~{Base::layout(~{::section})}">
+	<head>
+		<meta charset="UTF-8">
+		<title>E-Book Management System | Registration</title>
+	</head>	
+	<body>
+		<section>
+			<div class="container mt-2">
+				<div class="row d-flex justify-content-center align-items-center" style="height:78vh">
+					<div class="col-md-5">
+						<div class="card">
+							<div class="card-head bg-light p-2">
+								<h3 class="text-center fw-bold">Registration</h3>
+							</div>
+							<div class="card-body">
+								<div class="alert alert-success" th:if="${session.successMsg}">
+									<p class="fw-bold text-center">[[${session.successMsg}]] 🤩🤩🤩</p>
+									<th:block th:text="${@helper.removeSessionMessage()}"></th:block>
+								</div>
+								<div class="alert alert-danger" th:if="${session.failMsg}">
+									<p class="fw-bold text-center">[[${session.failMsg}]] 😡😡😡</p>
+									<th:block th:text="${@helper.removeSessionMessage()}"></th:block>
+								</div>
+								<div class="alert alert-warning" th:if="${session.warningMsg}">
+									<p class="fw-bold text-center">[[${session.warningMsg}]] 😐😐😐</p>
+									<th:block th:text="${@helper.removeSessionMessage()}"></th:block>
+								</div>
+								<form th:action="@{/saveUserInformation}" method="post" enctype="multipart/form-data">
+									<div class="form-group mb-2">
+										<label for="fullName">Enter Your Full Name</label>
+										<input type="text" id="fullName" class="form-control" name="fullName" autocomplete="off" required/>
+									</div>
+									<div class="form-group mb-2">
+										<label for="email">Enter Your Email</label>
+										<input type="text" id="email" class="form-control" name="email" autocomplete="off" required/>
+									</div>
+									<div class="form-group mb-2">
+										<label for="mobileNumber">Enter Your Mobile Number</label>
+										<input type="number" id="mobileNumber" class="form-control" name="mobileNumber" autocomplete="off" required/>
+									</div>
+									<div class="form-group mb-2">
+										<label for="password">Enter Your Password</label>
+										<input type="password" id="password" class="form-control" name="password" autocomplete="off" required/>
+									</div>
+									<div class="form-group mb-2">
+										<label for="userImage">Upload Image</label>
+										<input type="file" id="userImage" class="form-control" name="userImage" autocomplete="off" required/>
+									</div>
+									<div class="form-group mt-4">
+										<input type="submit" class="btn btn-primary form-control" />
+										<p class="text-center mt-2">I don't have an account? <a th:href="@{/signin}">sign in</a></p>
+									</div>
+								</form>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+	</body>
+</html>

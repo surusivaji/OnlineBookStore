@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org" th:replace="~{/User/Base::layout(~{::section})}">
+	<head>
+		<meta charset="UTF-8">
+		<title>E-Book Management System | My Orders</title>
+	</head>
+	<body>
+		<section class="mt-2">
+			<div class="container-fluid">
+				<div class="row">
+					<div class="col-md-12">
+						<div class="card">
+							<div class="card-head p-2">
+								<h3 class="text-center fw-bold text-danger">My Orders</h3>
+							</div>
+							<div class="card-body table-responsive">
+								<!-- ALERT MESSAGE STARTS -->
+								<div class="alert alert-success" th:if="${session.successMsg}">
+									<p class="text-center fw-bold">[[${session.successMsg}]] 😐😐😐</p>
+									<th:block th:text="${@helper.removeSessionMessage()}"></th:block>
+								</div>
+								<div class="alert alert-danger" th:if="${session.failMsg}">
+									<p class="text-center fw-bold">[[${session.failMsg}]] 😡😡😡</p>
+									<th:block th:text="${@helper.removeSessionMessage()}"></th:block>
+								</div>
+								<!-- ALERT MESSAGE ENDS -->
+								<table class="table border-black table-hover">
+									<tr class="table-dark">
+										<th>Order ID</th>
+										<th>Date</th>
+										<th>Book Name</th>
+										<th>Image</th>
+										<th>Price</th>
+										<th>Status</th>
+										<th>Action</th>
+									</tr>
+									<tr th:each="bookOrder : ${bookOrders}">
+										<th th:text="${bookOrder.orderId}"></th>
+										<td th:text="${#dates.format(bookOrder.orderDate, 'dd-MM-yyyy')}"></td>
+										<td th:text="${bookOrder.book.bookName}"></td>
+										<td>
+											<img th:src="@{'/images/books/'+${bookOrder.book.bookPhoto}}" class="img-fluid img-thumbnail" alt="" height="80px" width="80px"/>
+										</td>
+										<td>
+											Quantity: <span th:text="${bookOrder.quantity}"></span>
+											<br />
+											Price: <span th:text="${bookOrder.price}"></span>
+											<br />
+											Total Price: <span th:text="${bookOrder.quantity*bookOrder.price}"></span> 
+										</td>
+										<td th:text="${bookOrder.status}"></td>
+										<th:block th:if="${bookOrder.status=='Cancelled' || bookOrder.status=='Delivered'}">
+											<td>
+												<a class="btn btn-warning btn-sm disabled">Cancel</a>
+												<a th:href="@{'/user/deleteBookOrder/'+${bookOrder.id}}" class="btn btn-danger btn-sm">Delete</a>
+											</td>
+										</th:block>
+										<th:block th:unless="${bookOrder.status=='Cancelled' || bookOrder.status=='Delivered'}">
+											<td>
+												<a th:href="@{'/user/updateBookOrderStatus?orderId='+${bookOrder.id}+'&status=6'}" class="btn btn-warning btn-sm">Cancel</a>
+												<a th:href="@{'/user/deleteBookOrder/'+${bookOrder.id}}" class="btn btn-danger btn-sm">Delete</a>
+											</td>
+										</th:block>
+									</tr>
+								</table>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+	</body>
+</html>

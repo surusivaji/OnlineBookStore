@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org" th:replace="~{Admin/Base::layout(~{::section})}">
+	<head>
+		<meta charset="UTF-8">
+		<title>Admin DashBoard</title>
+	</head>
+	<body>
+		<section class="mt-3">
+			<div class="container">
+				<div class="row">
+					<div class="col-md-12 mt-2">
+						<h3 class="text-center text-danger fw-bold">Admin Dashboard</h3>
+					</div>
+				</div>
+				<div class="row">
+					<div class="col-md-4 mt-3">
+						<a th:href="@{/admin/addBook}" class="text-decoration-none">
+							<div class="card">
+								<div class="card-body text-primary text-center">
+									<i class="fa-solid fa-plus fa-3x"></i>
+									<h4>Add Book</h4>
+								</div>
+							</div>
+						</a>
+					</div>
+					<div class="col-md-4 mt-3">
+						<a th:href="@{/admin/viewBooks}" class="text-decoration-none">
+							<div class="card">
+								<div class="card-body text-warning text-center">
+									<i class="fa-solid fa-book-open fa-3x"></i>
+									<h4>View Books</h4>
+								</div>
+							</div>
+						</a>
+					</div>
+					<div class="col-md-4 mt-3">
+						<a th:href="@{/admin/orders}" class="text-decoration-none">
+							<div class="card">
+								<div class="card-body text-danger text-center">
+									<i class="fa-solid fa-box-open fa-3x"></i>
+									<h4>Orders</h4>
+								</div>
+							</div>
+						</a>
+					</div>
+					<div class="col-md-4 mt-3">
+						<a th:href="@{/admin/users}" class="text-decoration-none">
+							<div class="card">
+								<div class="card-body profile-id text-center">
+									<i class="fa-solid fa-user fa-3x"></i>
+									<h4>Users</h4>
+								</div>
+							</div>
+						</a>
+					</div>
+					<div class="col-md-4 mt-3">
+						<a th:href="@{/admin/addAdmin}" class="text-decoration-none">
+							<div class="card">
+								<div class="card-body text-success text-center">
+									<i class="fa-solid fa-user-plus fa-3x"></i>
+									<h4>Add Admin</h4>
+								</div>
+							</div>
+						</a>
+					</div>
+					<div class="col-md-4 mt-3">
+						<a th:href="@{/admin/viewAdmins}" class="text-decoration-none">
+							<div class="card">
+								<div class="card-body text-info text-center">
+									<i class="fa-solid fa-user-tie fa-3x"></i>
+									<h4>View Admins</h4>
+								</div>
+							</div>
+						</a>
+					</div>
+				</div>
+			</div>
+		</section>
+	</body>
+</html>

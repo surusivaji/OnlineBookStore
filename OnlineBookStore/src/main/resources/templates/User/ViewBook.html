@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org" th:replace="~{User/Base::layout(~{::section})}">
+	<head>
+		<meta charset="UTF-8">
+		<title>E-Book Management System | View Book</title>
+	</head>
+	<body>
+		<section class="mt-3">
+			<div class="container">
+				<div class="alert alert-success" th:if="${session.successMsg}">
+					<p class="fw-bold text-center">[[${session.successMsg}]] 🤩🤩🤩</p>
+					<th:block th:text="${@helper.removeSessionMessage()}"></th:block>
+				</div>
+				<div class="alert alert-danger" th:if="${session.failMsg}">
+					<p class="fw-bold text-center">[[${session.failMsg}]] 😡😡😡</p>
+					<th:block th:text="${@helper.removeSessionMessage()}"></th:block>
+				</div>
+				<div class="row">
+					<div class="col-md-6 text-center p-5 border bg-light">
+						<img th:src="@{'/images/books/'+${book.bookPhoto}}" alt="" class="img-thumbnail bookPhoto" style="height:250px;width:180px"/>
+						<h4>Book Name : <span class="text-success" th:text="${book.bookName}"></span></h4>
+						<h4>Author Name : <span class="text-success" th:text="${book.authorName}"></span></h4>
+						<h4>Category : <span class="text-success" th:text="${book.bookCategory}"></span> </h4>
+					</div>
+					<div class="col-md-6 text-center p-3 border bg-light">
+						<h2 th:text="${book.bookName}"></h2>
+						<div th:if="${book.bookCategory=='Old'}">
+							<h5 class="text-primary">Contact To Seller</h5>
+							<h5 class="text-primary"><i class="fa-solid fa-envelope"></i> <span th:text="${book.email}"></span></h5>
+						</div>
+						<div class="row">
+							<div class="col-md-4 text-center text-danger p-2">
+								<i class="fa-solid fa-money-bill-wave fa-3x"></i>
+								<p>Cash On Delivery</p>
+							</div>
+							<div class="col-md-4 text-center text-danger p-2">
+								<i class="fa-solid fa-arrow-rotate-left fa-3x"></i>
+								<p>Return Avaliable</p>
+							</div>
+							<div class="col-md-4 text-center text-danger p-2">
+								<i class="fa-solid fa-truck fa-3x"></i>
+								<p>Free Shipping</p>
+							</div>
+						</div>
+						<div class="text-center p-5">
+							<a href="" class="btn btn-primary" th:if="${book.bookCategory=='Old'}"> <i class="fa-solid fa-cart-plus"></i> Continue Shopping</a>
+							<a th:href="@{'/user/addToCart?uid=' + ${user.id} + '&bid=' + ${book.id}}" class="btn btn-primary" th:if="${book.bookCategory=='New'}"> <i class="fa-solid fa-cart-plus"></i> Add Cart</a>
+							<a href="" class="btn btn-danger"> <i class="fa-solid fa-indian-rupee-sign"></i> <span th:text="${book.price}"></span></a>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+	</body>
+</html>

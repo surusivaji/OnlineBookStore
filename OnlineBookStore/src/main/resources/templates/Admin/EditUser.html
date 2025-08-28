@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org" th:replace="~{/Admin/Base::layout(~{::section})}">
+	<head>
+		<meta charset="UTF-8">
+		<title>E-Book Management System | Edit User</title>
+	</head>
+	<body>
+		<section>
+			<div class="container">
+				<div class="row d-flex justify-content-center align-items-center" style="height:80vh">
+					<div class="col-md-5">
+						<div class="card">
+							<div class="card-head p-2">
+								<h3 class="text-center text-primary">Edit User</h3>
+							</div>
+							<div class="card-body">
+								<!-- ALERT MESSAGES STARTS -->
+								<div class="alert alert-success" th:if="${session.successMsg}">
+									<p class="text-center fw-bold">[[${session.successMsg}]] 😊😊😊</p>
+									<th:block th:text="${@helper.removeSessionMessage()}"></th:block>
+								</div>
+								<div class="alert alert-danger" th:if="${session.failMsg}">
+									<p class="text-center fw-bold">[[${session.failMsg}]] 😡😡😡</p>
+									<th:block th:text="${@helper.removeSessionMessage()}"></th:block>
+								</div>
+								<!-- ALERT MESSAGES ENDS -->
+								<form th:action="@{/admin/updateUserInformation}" method="post">
+									<input type="hidden" id="id" name="id" th:value="${user.id}" class="form-control" autocomplete="off" required/>
+									<div class="form-group mb-3">
+										<label for="fullName">Name</label>
+										<input type="text" id="fullName" name="fullName" th:value="${user.fullName}" class="form-control" autocomplete="off" required/>
+									</div>
+									<div class="form-group mb-3">
+										<label for="email">Email</label>
+										<input type="email" id="email" name="email" th:value="${user.email}" class="form-control" autocomplete="off" required/>
+									</div>
+									<div class="form-group mb-3">
+										<label for="mobileNumber">Mobile Number</label>
+										<input type="number" id="mobileNumber" name="mobileNumber" th:value="${user.mobileNumber}" class="form-control" autocomplete="off" required/>
+									</div>
+									<div class="form-group mb-3">
+										<label for="password">Password</label>
+										<input type="text" id="password" name="password" th:value="${user.password}" class="form-control" autocomplete="off" required/>
+									</div>
+									<div class="form-group mb-3">
+										<input type="submit" class="btn btn-primary form-control" value="Update">
+									</div>
+								</form>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+	</body>
+</html>

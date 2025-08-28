@@ -1,0 +1,65 @@
+::-webkit-scrollbar {
+	display: none;
+}
+
+body {
+	background: #F5F5F5;
+}
+
+.bg-fav {
+	background-color: #303f9f !important;
+}
+
+
+.card {
+	box-shadow: 0 0 2px 2px #E5D9F2;
+}
+
+.back-img {
+	background-image: url("/images/backgroundImage.jpg");
+	width: 100%;
+	background-repeat: no-repeat;
+	height: 50vh;
+	background-size: cover;
+}
+
+.bookPhoto {
+	height: 200px;
+	width: 150px;
+}
+
+.bookImage {
+	height: 150px;
+	width: 100px;
+}
+
+.profileImage {
+	height: 180px;
+	width: 180px;
+	border-radius: 50%;
+}
+
+.profile-id {
+	color : #890596 !important;
+}
+
+.heading {
+	color: #FF3F00 !important;
+}
+
+.adminProfile {
+	height: 90px;
+	width: 90px;
+	border-radius: 50%;
+}
+
+.profile {
+	height: 100px;
+	width: 100px;
+	border-radius: 50%;
+}
+
+.btn-fav {
+	background: #303f9f;
+	border: 1px solid #303f9f;
+}

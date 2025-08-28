@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org" th:replace="~{User/Base::layout(~{::section})}">
+	<head>
+		<meta charset="UTF-8">
+		<title>E-Book Management System | Cart Page</title>
+	</head>
+	<body>
+		<section>
+			<div class="container mt-2">
+				<div class="row">
+					<div class="card">
+						<div class="p-2 text-center text-danger card-head">
+						 	<h3 class="fw-bold">Your Cart</h3>
+						</div>
+						<div class="card-body table-responsive">
+							<table class="table table-hover">
+								<tr class="table-dark">
+									<th>SI.NO</th>
+									<th>Image</th>
+									<th>Book Name</th>
+									<th>Author Name</th>
+									<th>Price</th>
+									<th>Quantity</th>
+									<th>Total Price</th>
+								</tr>
+								<th:block th:if="${carts.size==0}">
+									<tr>
+										<td colspan="7" class="text-center text-warning fs-4 fw-bold">Books are not avaliable</td>
+									</tr>
+								</th:block>
+								<tr th:each="cart, c : ${carts}">
+									<td th:text="${c.count}"></td>
+									<td><img th:src="@{'/images/books/'+${cart.book.bookPhoto}}" alt="" style="height:70px; width:50px" class="img-fluid"/></td>
+									<td th:text="${cart.book.bookName}"></td>
+									<td th:text="${cart.book.authorName}"></td>
+									<td th:text="${cart.book.price}"></td>
+									<td>
+										<a th:href="@{'/user/cartQuantityUpdate?status=decrease&cid='+${cart.id}}" class="btn btn-danger btn-sm fs-6 fw-bold">-</a>
+											[<span th:text="${cart.quantity}"></span>] 
+										<a th:href="@{'/user/cartQuantityUpdate?status=increase&cid='+${cart.id}}" class="btn btn-success btn-sm fs-6 fw-bold">+</a> 
+									</td>
+									<td th:text="${cart.totalPrice}"></td>
+								</tr>
+								<tr th:if="${carts.size!=0}">
+									<td colspan="5"></td>
+									<td class="fw-bold">Total Price : </td>
+									<td class="fw-bold text-danger"> <i class="fa-solid fa-indian-rupee-sign"></i><span th:text="${totalOrderPrice}"></span></td>
+								</tr> 
+							</table>
+							<div class="text-center" th:if="${carts.size!=0}">
+								<a th:href="@{/user/order}" class="btn btn-warning">Proceed Payment</a>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+	</body>
+</html>

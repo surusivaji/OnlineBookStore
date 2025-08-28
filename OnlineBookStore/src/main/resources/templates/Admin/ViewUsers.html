@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org" th:replace="~{/Admin/Base::layout(~{::section})}">
+	<head>
+		<meta charset="UTF-8">
+		<title>E-Book Management System | Users</title>
+	</head>
+	<body>
+		<section>
+			<div class="container-fluid mt-2">
+				<div class="row">
+					<div class="col-md-12">
+						<div class="card">
+							<div class="card-head p-2">
+								<h3 class="text-center text-danger fw-bold">Users Information</h3>
+							</div>
+							<div class="card-body table-responsive">
+								<!-- ALERT MESSAGES STARTS -->
+								<div class="alert alert-success" th:if="${session.successMsg}">
+									<p class="text-center fw-bold">[[${session.successMsg}]] 😊😊😊</p>
+									<th:block th:text="${@helper.removeSessionMessage()}"></th:block>
+								</div>
+								<div class="alert alert-danger" th:if="${session.failMsg}">
+									<p class="text-center fw-bold">[[${session.failMsg}]] 😡😡😡</p>
+									<th:block th:text="${@helper.removeSessionMessage()}"></th:block>
+								</div>
+								<!-- ALERT MESSAGES ENDS -->
+								<table class="table">
+									<tr class="table-dark">
+										<th>ID</th>
+										<th>Profile</th>
+										<th>Full Name</th>
+										<th>Email</th>
+										<th>Mobile Number</th>
+										<th>Password</th>
+										<th>Action</th>
+									</tr>
+									<tr th:each="user : ${users}">
+										<td th:text="${user.id}"></td>
+										<td>
+											<img th:src="@{'/images/users/'+${user.profileImage}}" class="img-fluid img-thumbnail adminProfile" alt="" />
+										</td>
+										<td th:text="${user.fullName}"></td>
+										<td th:text="${user.email}"></td>
+										<td th:text="${user.mobileNumber}"></td>
+										<td th:text="${user.password}"></td>
+										<td>
+											<a th:href="@{'/admin/editUser/'+${user.id}}" class="btn btn-primary btn-sm"> <i class="fa-solid fa-pen-to-square"></i> Edit</a>
+											<a th:href="@{'/admin/deleteUser/'+${user.id}}" class="btn btn-danger btn-sm"> <i class="fa-solid fa-trash-can"></i> Remove</a>
+										</td>
+									</tr>
+								</table>
+								<div class="d-flex justify-content-center">
+									<nav aria-label="Page navigation example">
+									  <ul class="pagination">
+									    <li class="page-item" th:if="${currentPage!=0}">
+									      <a class="page-link" th:href="@{'/admin/viewUsers?pageNo='+${currentPage-1}}" aria-label="Previous">
+									        <span aria-hidden="true">&laquo;</span>
+									        <span class="sr-only">Previous</span>
+									      </a>
+									    </li>
+									    <li class="page-item" th:each="page : ${#numbers.sequence(1, totalPages)}" th:classappend="${currentPage==page-1 ? 'active' : ''}">
+									    	<a class="page-link" th:href="@{'/admin/viewUsers?pageNo='+${page-1}}" th:text="${page}"></a>
+									    </li>
+									    <li class="page-item" th:if="${currentPage+1!=totalPages}">
+									      <a class="page-link" th:href="@{'/admin/viewUsers?pageNo='+${currentPage+1}}" aria-label="Next">
+									        <span aria-hidden="true">&raquo;</span>
+									        <span class="sr-only">Next</span>
+									      </a>
+									    </li>
+									  </ul>
+									</nav>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+	</body>
+</html>
