@@ -16,10 +16,9 @@
 
 ## 📖 Overview 
 
-The **Online Book Store Application** is a user-friendly platform designed for buying and selling books online.  
-It simplifies the shopping process for customers while providing admins with tools to manage books, users, and orders efficiently.  
-The application is built using **Spring MVC, Spring Boot, and Spring Data JPA**, ensuring seamless back-end integration and a responsive UI.  
-With features like session management and pagination, the system is optimized for both **performance** and **scalability**.
+The purpose of the Online Book Store Application is to provide a digital platform for buying, selling, and managing books efficiently. It simplifies the process for users to search, view, purchase, or sell books online, eliminating the need for physical store visits. The application ensures a user-friendly and secure environment where customers can manage their profiles, track orders, and reset their passwords if required.
+
+For administrators, the platform enables efficient management of books, users, and orders, ensuring smooth operations. Features like pagination enhance the user experience by presenting data in an organized and easily accessible format. Overall, the project aims to streamline book transactions and provide a seamless, reliable, and scalable online bookstore solution.
 
 ---
 
