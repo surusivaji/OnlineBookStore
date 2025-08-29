@@ -204,7 +204,7 @@ mvn spring-boot:run
     <h4>36. Delete User Order</h4>
    <img src="deleteorder.png" alt="delete order" width="80%"> 
     <h4>37. Display Registered Users</h4>
-   <img src="user.png" alt="users" width="80%">
+   <img src="users.png" alt="users" width="80%">
     <h4>38. Update User Information</h4>
    <img src="edituser.png" alt="update user" width="80%">
   <h4>39. Update User Information</h4>
@@ -221,7 +221,9 @@ mvn spring-boot:run
     <img src="deleteadmin.png" alt="delete admin" width="80%">
     <h4>45. Admin Logout</h4>
     <img src="adminlogout.png" alt="admin logout" width="80%">
----
+
+  
+<hr/>
 
 <h3 align="center">🎉 Happy Shopping! 🚀</h3> 
 <p align="center">Thank you for checking out this project! If you found it helpful, <b>give it a star ⭐ on GitHub! </b> 😊</p>
