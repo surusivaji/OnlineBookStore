@@ -45,7 +45,7 @@
 										<td th:text="${user.password}"></td>
 										<td>
 											<a th:href="@{'/admin/editUser/'+${user.id}}" class="btn btn-primary btn-sm"> <i class="fa-solid fa-pen-to-square"></i> Edit</a>
-											<a th:href="@{'/admin/deleteUser/'+${user.id}}" class="btn btn-danger btn-sm"> <i class="fa-solid fa-trash-can"></i> Remove</a>
+											<a th:onclick="'deleteUser('+${user.id}+')'" class="btn btn-danger btn-sm"> <i class="fa-solid fa-trash-can"></i> Remove</a>
 										</td>
 									</tr>
 								</table>
@@ -75,6 +75,24 @@
 					</div>
 				</div>
 			</div>
+			<script>
+				function deleteUser(id) {
+					swal({
+					    title: "Are you sure?",
+					    text: "You want to delete this user information!",
+					    icon: "warning",
+					    buttons: true,
+					    dangerMode: true,
+					 })
+					 .then((willDelete) => {
+					       if (willDelete) {
+					            window.location = "/admin/deleteUser/" + id;  
+					       } else {
+					            swal("User information is safe!");
+					       }
+					  });
+			    }
+			</script>
 		</section>
 	</body>
 </html>
