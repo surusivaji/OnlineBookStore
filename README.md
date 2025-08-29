@@ -207,19 +207,17 @@ mvn spring-boot:run
    <img src="users.png" alt="users" width="80%">
     <h4>38. Update User Information</h4>
    <img src="edituser.png" alt="update user" width="80%">
-  <h4>39. Update User Information</h4>
-   <img src="edituser.png" alt="update user" width="80%">
-  <h4>40. Delete User Information</h4>
+  <h4>39. Delete User Information</h4>
   <img src="deleteuser.png" alt="delete user" width="80%">
-   <h4>41. Add Admin</h4>
+   <h4>40. Add Admin</h4>
   <img src="addadmin.png" alt="add admin" width="80%">
-    <h4>42. Display Admins Information</h4>
+    <h4>41. Display Admins Information</h4>
   <img src="admins.png" alt="admins" width="80%">
-  <h4>43. Update Admin Information</h4>
+  <h4>42. Update Admin Information</h4>
   <img src="editadmin.png" alt="edit admin" width="80%">
-   <h4>44. Delete Admin Account</h4>
+   <h4>43. Delete Admin Account</h4>
     <img src="deleteadmin.png" alt="delete admin" width="80%">
-    <h4>45. Admin Logout</h4>
+    <h4>44. Admin Logout</h4>
     <img src="adminlogout.png" alt="admin logout" width="80%">
 
   
