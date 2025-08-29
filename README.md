@@ -134,7 +134,7 @@ mvn spring-boot:run
   <h4>1. Index Page</h4>
   <img src="index.png" alt="Index Page" width="80%">
   <h4>2. Registration Page</h4>
-  <img src="register.png" alt="User Registration Page" width="80%">
+  <img src="registeration.png" alt="User Registration Page" width="80%">
    <h4>3. Login Page</h4>
   <img src="login.png" alt="User Login Page" width="80%">
    <h4>4. Forgot Password Page</h4>
