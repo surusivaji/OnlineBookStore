@@ -131,19 +131,96 @@ mvn spring-boot:run
 ## 🖼️ Screenshots
 <p>Below are sample screenshots showcasing the Shopping Application:</p>
 <div>
-  <h4>1. Index Page</h4>
+  <h4>1. Index</h4>
   <img src="index.png" alt="Index Page" width="80%">
-  <h4>2. Registration Page</h4>
+  <h4>2. Registration</h4>
   <img src="registeration.png" alt="User Registration Page" width="80%">
-   <h4>3. Login Page</h4>
+   <h4>3. Login</h4>
   <img src="login.png" alt="User Login Page" width="80%">
-   <h4>4. Forgot Password Page</h4>
+   <h4>4. Forgot Password</h4>
   <img src="forgotpassword.png" alt="Forgot Password Page" Page" width="80%">
-   <h4>5. Reset Password Page</h4>
+   <h4>5. Reset Password</h4>
   <img src="changepassword.png" alt="Reset Password Page" width="80%">
-   <h4>6. Home Page</h4>
+   <h4>6. Home</h4>
   <img src="userhome.png" alt="Home Page" width="80%">
-
+  <h4>7. User Profile</h4>
+  <img src="profile.png" alt="Profile Page" width="80%">
+  <h4>8. Recent Books</h4>
+  <img src="recentbooks.png" alt="Recent Books Page" width="80%">
+  <h4>9. Old Books</h4>
+  <img src="oldbooks.png" alt="Old Books Page" width="80%">
+  <h4>10. New Books</h4>
+  <img src="newbooks.png" alt="New Books Page" width="80%">
+  <h4>11. Search Book</h4>
+  <img src="searchbook.png" alt="Search Book Page" width="80%">
+  <h4>12. Display Old Book</h4>
+  <img src="viewoldbook.png" alt="View Old Book Page" width="80%">
+   <h4>13. Display New Book</h4>
+  <img src="viewnewbook.png" alt="View New Book Page" width="80%">
+   <h4>14. Display Cart</h4>
+  <img src="viewcart.png" alt="View cart Page" width="80%">
+  <h4>15. Fill Address</h4>
+  <img src="filladdress.png" alt="Fill address Page" width="80%">
+  <h4>16. Settings</h4>
+  <img src="setting.png" alt="Settings " width="80%">
+  <h4>17. My Orders</h4>
+  <img src="myorders.png" alt="my orders " width="80%">
+  <h4>18. Cancel Order</h4>
+  <img src="cancelorder.png" alt="cancel order" width="80%">
+  <h4>19. Delete Order</h4>
+  <img src="deleteorder.png" alt="cancel order" width="80%">
+  <h4>20. Sell Book</h4>
+  <img src="sellbook.png" alt="sell book" width="80%">
+  <h4>21. User Old Books</h4>
+  <img src="useroldbooks.png" alt="user old books" width="80%">
+  <h4>22. Delete User Old Book</h4>
+  <img src="deleteuseroldbook.png" alt="delete user old books" width="80%">
+  <h4>23. Edit User Profile</h4>
+  <img src="editprofile.png" alt="edit user profile" width="80%">
+  <h4>24. Delete User Account</h4>
+  <img src="deleteaccount.png" alt="delete user account" width="80%"> 
+  <h4>25. Contact Us</h4>
+  <img src="contactus.png" alt="contact us" width="80%"> 
+   <h4>26. User Logout</h4>
+   <img src="logout.png" alt="logout" width="80%">   
+    <h4>27. Admin Login</h4>
+   <img src="admin.png" alt="admin" width="80%">   
+    <h4>28. Admin Dashboard</h4>
+   <img src="admindashboard.png" alt="admin dashboard" width="80%">   
+   <h4>29. Admin Profile</h4>
+   <img src="adminprofile.png" alt="admin profile" width="80%"> 
+   <h4>30. Add Book</h4>
+   <img src="addBook.png" alt="admin book" width="80%"> 
+   <h4>31. Display Book</h4>
+   <img src="displaybooks.png" alt="display books" width="80%"> 
+    <h4>32. Edit Book</h4>
+   <img src="displaybooks.png" alt="edit book" width="80%"> 
+   <h4>33. Delete Book</h4>
+   <img src="deletebook.png" alt="delete book" width="80%"> 
+   <h4>34. Display Orders</h4>
+   <img src="orders.png" alt="Orders" width="80%"> 
+    <h4>35. Update Order Status</h4>
+   <img src="bookorderstatus.png" alt="Book Order status" width="80%"> 
+    <h4>36. Delete User Order</h4>
+   <img src="deleteorder.png" alt="delete order" width="80%"> 
+    <h4>37. Display Registered Users</h4>
+   <img src="user.png" alt="users" width="80%">
+    <h4>38. Update User Information</h4>
+   <img src="edituser.png" alt="update user" width="80%">
+  <h4>39. Update User Information</h4>
+   <img src="edituser.png" alt="update user" width="80%">
+  <h4>40. Delete User Information</h4>
+  <img src="deleteuser.png" alt="delete user" width="80%">
+   <h4>41. Add Admin</h4>
+  <img src="addadmin.png" alt="add admin" width="80%">
+    <h4>42. Display Admins Information</h4>
+  <img src="admins.png" alt="admins" width="80%">
+  <h4>43. Update Admin Information</h4>
+  <img src="editadmin.png" alt="edit admin" width="80%">
+   <h4>44. Delete Admin Account</h4>
+    <img src="deleteadmin.png" alt="delete admin" width="80%">
+    <h4>45. Admin Logout</h4>
+    <img src="adminlogout.png" alt="admin logout" width="80%">
 ---
 
 <h3 align="center">🎉 Happy Shopping! 🚀</h3> 
